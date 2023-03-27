@@ -17,7 +17,7 @@ async function run() {
   } catch (error) {
     core.setFailed(error.message);
   }
-  console.log(process.env.GITHUB_BASE_REF)
+  console.log(process.env.GITHUB_REF)
   console.log(process.env.GITHUB_SHA)
   console.log(process.env.GITHUB_REPOSITORY)
 }
