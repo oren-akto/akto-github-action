@@ -1,0 +1,24 @@
+{
+  "name": "akto-github-action",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oren-akto/akto-github-action.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oren-akto/akto-github-action.git/issues"
+  },
+  "homepage": "https://github.com/oren-akto/akto-github-action.git#readme",
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "axios": "^1.3.4"
+  }
+}
