@@ -6,7 +6,7 @@ async function run() {
 
   const AKTO_DASHBOARD_URL = core.getInput('AKTO_DASHBOARD_URL');
   const AKTO_API_KEY = core.getInput('AKTO_API_KEY');
-  const AKTO_TEST_CONFIGURATION = JSON.parse(core.getInput('AKTO_TEST_CONFIGURATION'));
+  const AKTO_TEST_CONFIGURATION = core.getInput('AKTO_TEST_CONFIGURATION')
 
   if (AKTO_DASHBOARD_URL.endsWith("/")) {
     AKTO_START_TEST_ENDPOINT = AKTO_DASHBOARD_URL + "api/startTest"
