@@ -38,6 +38,7 @@ async function run() {
     console.log("Akto CI/CD test started")
     console.log(res)
   } catch (error) {
+    console.log(error)
     core.setFailed(error.message);
   }
 
