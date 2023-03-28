@@ -20,6 +20,18 @@ async function run() {
 
   console.log(GITHUB_REPOSITORY, GITHUB_REF_NAME, GITHUB_SHA)
 
+   const test = {
+    "testingRunHexId": AKTO_TEST_ID,
+    "metadata": {
+      "platform": "Github Actions",
+      "repository": process.env.GITHUB_REPOSITORY,
+      "branch": process.env.GITHUB_REF_NAME,
+      "commit_sha": process.env.GITHUB_SHA
+    }
+  }
+
+  console.log(test)
+
   // const data = {
   //   "testingRunHexId": AKTO_TEST_ID,
   //   "metadata": {
