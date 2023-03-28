@@ -4,10 +4,11 @@ const axios = require("axios")
 async function run() {
   let AKTO_START_TEST_ENDPOINT = ""
 
+  
   const AKTO_DASHBOARD_URL = core.getInput('AKTO_DASHBOARD_URL');
   const AKTO_API_KEY = core.getInput('AKTO_API_KEY');
   const AKTO_TEST_CONFIGURATION = core.getInput('AKTO_TEST_CONFIGURATION')
-  
+
   const GITHUB_REPOSITORY = process.env.GITHUB_REPOSITORY
   const GITHUB_REF_NAME = process.env.GITHUB_REF_NAME
   const GITHUB_SHA = process.env.GITHUB_SHA
