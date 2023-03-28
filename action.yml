@@ -3,7 +3,7 @@ description: 'Run akto in ci/cd'
 inputs:
   AKTO_DASHBOARD_URL:  
     required: true
-  AKTO_ACCESS_TOKEN:  
+  AKTO_API_KEY:  
     required: true
   AKTO_TEST_CONFIGURATION:  
     required: true
