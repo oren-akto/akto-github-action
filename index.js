@@ -8,10 +8,6 @@ async function run() {
   const AKTO_API_KEY = core.getInput('AKTO_API_KEY');
   const AKTO_TEST_CONFIGURATION = core.getInput('AKTO_TEST_CONFIGURATION')
 
-  console.log(AKTO_DASHBOARD_URL)
-  console.log(AKTO_API_KEY)
-  console.log(AKTO_TEST_CONFIGURATION)
-
   if (AKTO_DASHBOARD_URL.endsWith("/")) {
     AKTO_START_TEST_ENDPOINT = AKTO_DASHBOARD_URL + "api/startTest"
   } else {
@@ -36,9 +32,7 @@ async function run() {
   try {
     res = await axios(config)
     console.log("Akto CI/CD test started")
-    console.log(res)
   } catch (error) {
-    console.log(error)
     core.setFailed(error.message);
   }
 
