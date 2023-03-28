@@ -5,7 +5,7 @@ inputs:
     required: true
   AKTO_API_KEY:  
     required: true
-  AKTO_TEST_CONFIGURATION:  
+  AKTO_TEST_ID:  
     required: true
 runs:
   using: 'node16'
