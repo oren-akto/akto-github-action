@@ -14,7 +14,7 @@ async function run() {
     AKTO_START_TEST_ENDPOINT = AKTO_DASHBOARD_URL + "/api/startTest"
   }
 
-   const test = {
+   const data = {
     "testingRunHexId": AKTO_TEST_ID,
     "metadata": {
       "platform": "Github Actions",
@@ -25,20 +25,6 @@ async function run() {
     }
   }
 
-  console.log(test)
-
-  // const data = {
-  //   "testingRunHexId": AKTO_TEST_ID,
-  //   "metadata": {
-  //     "platform": "Github Actions",
-  //     "repository": process.env.GITHUB_REPOSITORY,
-  //     "branch": process.env.GITHUB_REF_NAME,
-  //     "commit_sha": process.env.GITHUB_SHA
-  //   }
-  // }
-
-  
-
   const config = {
     method: 'post',
     url: AKTO_START_TEST_ENDPOINT,
@@ -47,7 +33,7 @@ async function run() {
       'X-API-KEY': AKTO_API_KEY,
       'account': 1000000
     },
-    data: AKTO_TEST_ID
+    data: data
   }
 
   try {
@@ -56,7 +42,6 @@ async function run() {
   } catch (error) {
     core.setFailed(error.message);
   }
-
 }
 
 run();
