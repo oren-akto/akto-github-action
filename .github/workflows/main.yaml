@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Test akto ci/cd
     steps:
-      - uses: oren-akto/akto-github-action@v1.0
+      - uses: oren-akto/akto-github-action
         with:
           AKTO_DASHBOARD_URL: ${{secrets.AKTO_DASHBOARD_URL}}
           AKTO_API_KEY: ${{secrets.AKTO_API_KEY}}
