@@ -14,17 +14,12 @@ async function run() {
     AKTO_START_TEST_ENDPOINT = AKTO_DASHBOARD_URL + "/api/startTest"
   }
 
-  const GITHUB_REPOSITORY = process.env.GITHUB_REPOSITORY
-  const GITHUB_REF_NAME = process.env.GITHUB_REF_NAME
-  const GITHUB_SHA = process.env.GITHUB_SHA
-
-  console.log(GITHUB_REPOSITORY, GITHUB_REF_NAME, GITHUB_SHA)
-
    const test = {
     "testingRunHexId": AKTO_TEST_ID,
     "metadata": {
       "platform": "Github Actions",
       "repository": process.env.GITHUB_REPOSITORY,
+      "repository_url": process.env.SERVER_URL + "/" + process.env.GITHUB_REPOSITORY, 
       "branch": process.env.GITHUB_REF_NAME,
       "commit_sha": process.env.GITHUB_SHA
     }
