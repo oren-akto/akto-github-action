@@ -52,7 +52,7 @@ async function run() {
       'X-API-KEY': AKTO_API_KEY,
       'account': 1000000
     },
-    data: data
+    data: AKTO_TEST_ID
   }
 
   try {
