@@ -31,7 +31,6 @@ async function run() {
     headers: {
       'Content-Type': 'application/json',
       'X-API-KEY': AKTO_API_KEY,
-      'account': 1000000
     },
     data: data
   }
