@@ -7,6 +7,15 @@ async function run() {
   const AKTO_DASHBOARD_URL = core.getInput('AKTO_DASHBOARD_URL')
   const AKTO_API_KEY = core.getInput('AKTO_API_KEY')
   const AKTO_TEST_ID = core.getInput('AKTO_TEST_ID')
+  const START_TIME_DELAY = core.getInput('START_TIME_DELAY')
+  
+  let startTimestamp = 0;
+  if(START_TIME_DELAY!=''){
+    let delay = parseInt(START_TIME_DELAY);
+    if(!isNaN(delay)){
+      startTimestamp = Date.now()/1000 + delay;
+    }
+  }
 
   if (AKTO_DASHBOARD_URL.endsWith("/")) {
     AKTO_START_TEST_ENDPOINT = AKTO_DASHBOARD_URL + "api/startTest"
@@ -16,6 +25,7 @@ async function run() {
 
    const data = {
     "testingRunHexId": AKTO_TEST_ID,
+    "startTimestamp" : startTimestamp,
     "metadata": {
       "platform": "Github Actions",
       "repository": process.env.GITHUB_REPOSITORY,

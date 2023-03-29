@@ -7,6 +7,8 @@ inputs:
     required: true
   AKTO_TEST_ID:  
     required: true
+  START_TIME_DELAY:
+    required: false
 runs:
   using: 'node16'
   main: 'index.js'
